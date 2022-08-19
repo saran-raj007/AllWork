@@ -1,0 +1,18 @@
+#name{
+
+    color: aqua;
+}
+h1{
+    color: blue;
+    text-align: center;
+}
+form{
+    align-self:center;
+    text-align: center;
+    background-color: ghostwhite;
+}
+body{
+    background-size: auto;
+    background-color: lavender;
+    text-shadow: 10cm;
+}
