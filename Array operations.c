@@ -6,7 +6,7 @@ int n;
 int ispresent(int arr[],int m){
     int f=0;
     for(int i=0;i<n;i++){
-        if(arr[i]==n){
+        if(arr[i]==m){
             f=1;
         }
     }
