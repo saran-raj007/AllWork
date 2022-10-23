@@ -1,3 +1,4 @@
+//This code doesn't run,becuse this code have more errors and i did't  fully complete this code,i will complete it later!!
 #include<stdio.h>
 #include<stdlib.h>
 
