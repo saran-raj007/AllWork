@@ -1,3 +1,4 @@
+//This code doesn't run, it have  some errors!!!!! 
 #include<stdio.h>
 #include<stdlib.h>
 int num;
