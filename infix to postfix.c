@@ -79,7 +79,12 @@ void pop1(){
 }
 void pop(char e){
     postfix[++top1]=stack[top--];
-    stack[++top]=e;
+    if(instack(top)<income(e)){
+       stack[++top]=e;
+       
+    }else{
+        pop(e);
+    }
 }
 void Convertpostfix(char a){
     if((a>=65 && a<=90)||(a>=97 && a<=122)){
@@ -91,9 +96,6 @@ void Convertpostfix(char a){
     }
     else if(a==')'){
         pop1();
-    }
-    else if(top<0){
-        stack[++top]=a;
     }
     else if(top<0){
         push(a);
