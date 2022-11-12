@@ -54,6 +54,7 @@ int income(char p){
             case ')':
             return 0;
             break;
+                
         }
     
 }
@@ -101,7 +102,7 @@ void Convertpostfix(char a){
         push(a);
     }
     else if(instack(stack[top])<income(a)){
-        //printf("%c",stcak[top]);
+        
         push(a);
 
     }
