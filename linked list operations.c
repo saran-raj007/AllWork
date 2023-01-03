@@ -46,7 +46,9 @@ struct Node *head=NULL,*tail=NULL;
         if(ptr->data==element){
             printf("%d",ptr->data);
             f=1;
+            break;
         }
+        ptr=ptr->link;
     }
     if(f==1){
         printf("\nElememt is found");
@@ -79,15 +81,13 @@ struct Node *head=NULL,*tail=NULL;
     struct Node* nnode=newnode();
     nnode->data=element;
     nnode->link=NULL;
-    head->link=nnode;
-    nnode->link=tail;
+    nnode->link=head;
+    head=nnode;
+    
     printf("AFTER INSERTION:\n");
-    struct Node* ptr=head->link;
-    while(ptr!=NULL){
-        printf("%d ",ptr->data);
-        ptr=ptr->link;
-    }
-    num++;
+    traversing();
+   
+    
 
   }
   void InsertionAtEnding(){
@@ -96,19 +96,12 @@ struct Node *head=NULL,*tail=NULL;
     struct Node* nnode=newnode();
     nnode->data=element;
     nnode->link=NULL;
-    struct Node* ptr=head->link;
-    while(ptr->link!=NULL){
-        ptr=ptr->link;
-    }
-    ptr->link=nnode;
-    nnode=NULL;
+    tail->link=nnode;
+   
     printf("After insertion:\n");
-    struct Node* ptr1=head->link;
-    while(ptr1!=NULL){
-        printf("%d ",ptr1->data);
-        ptr=ptr->link;
-    }
-    num++;
+    traversing();
+    
+    
   }
   void InsertAtAnyPosition(){
     int position,element,count=0;
@@ -118,19 +111,19 @@ struct Node *head=NULL,*tail=NULL;
     nnode->data=element;
     nnode->link=NULL;
     struct Node* ptr=head->link,*ptr1=NULL,*ptr2=head->link;
-    while(count!=position){
+    while(ptr!=NULL){
         count++;
+        if(count==position){
+            break;
+        }
         ptr=ptr->link;
     }
     ptr1=ptr->link;
     ptr->link=nnode;
     nnode->link=ptr1;
     printf("AFTER INSERTION:\n");
-    while(ptr2!=NULL){
-        printf("%d ",ptr->data);
-        ptr=ptr->link;
-    }
-    num++;
+    traversing();
+    
     
  }
  void TypeOfDeletion(){
@@ -156,11 +149,8 @@ struct Node *head=NULL,*tail=NULL;
     ptr2=ptr->link;
     head->link=ptr2;
     printf("AFTER DELETION:\n");
-    while(ptr!=NULL){
-        printf("%d",ptr->data);
-        ptr=ptr->link;
-    }
-    num--;
+    traversing();
+    
 }
 void DeletionAtEnding(){
     struct Node* ptr=head->link,*ptr1=NULL;
