@@ -122,6 +122,7 @@ struct Node *head=NULL,*tail=NULL;
     ptr->link=nnode;
     nnode->link=ptr1;
     printf("AFTER INSERTION:\n");
+    
     traversing();
     
     
