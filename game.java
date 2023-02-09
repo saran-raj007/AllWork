@@ -22,8 +22,8 @@ class game{
             }
             else{
                 count++;
-                System.out.println("!!!wrong answer!!!\n");
-                  System.out.println("!!TRY agin!!\n");
+                System.out.println("!!!wrong answer!!!");
+                  System.out.println("!!TRY agin!!");
                 System.out.println("!!hint!!");
                 if(g_number>rnumber){
                    System.out.println("Your guessing number is grater than the mystery number");
