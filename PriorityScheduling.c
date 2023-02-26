@@ -4,19 +4,19 @@
 
 
 int main(){
-    int num;
+    int n;
     printf("Enter number of process: ");
-    scanf("%d\n",&num);
+    scanf("%d",&n);
     int arr_tim[n],b_tim[n],w_tim[n],prio[n],ta_tim[n];
     printf("Enter the arrival time,burst time and priority for each process:\n");
     for(int i=0;i<n;i++){
         printf("P%d: ",i+1);
-        scanf("%d %d %d\n",&arr_tim[i],&b_tim[i],&prio[i]);
+        scanf("%d %d %d",&arr_tim[i],&b_tim[i],&prio[i]);
     }
     int mp[n];
 //     Turn Around time = Exit time – Arrival time
 // Waiting time = Turn Around time – Burst time
-int a[n],b[n],p[n]
+int a[n],b[n],p[n];
     for(int i=0;i<n;i++){
         if(i==0){
             for(int j=0;j<n;j++){
@@ -36,19 +36,19 @@ int a[n],b[n],p[n]
             int index;
 
             for(int j=0;j<n;j++){
-                if(min<prrio[j]){
+                if(min<prio[j]){
                     min=prio[j];
                     index=j;
                     mp[i]=j+1;
                 }
 
             }
-            ta_tim[i]=abs(b_tim[j]-arr_tim[j]);
-            w_tim[i]=abs(ta_tim[j]-b_tim[j]);
-            a[i]=arr_tim[j];
-             b[i]=b_tim[j];
-             p[i]=prio[j];
-            prio[j]=100000;
+            ta_tim[i]=abs(b_tim[index]-arr_tim[index]);
+            w_tim[i]=abs(ta_tim[index]-b_tim[index]);
+            a[i]=arr_tim[index];
+             b[i]=b_tim[index];
+             p[i]=prio[index];
+            prio[index]=100000;
 
 
 
@@ -56,7 +56,7 @@ int a[n],b[n],p[n]
         }
     }
     for(int i=0;i<n;i++){
-        printf("P%d %d %d %d %d\n",mp[i],a[i],b[i],p[i],w_tim[i],ta_tim[i);
+        printf("P%d %d %d %d %d %d\n",mp[i],a[i],b[i],p[i],w_tim[i],ta_tim[i]);
     }
 
 }
