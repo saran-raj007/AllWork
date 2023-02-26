@@ -1,14 +1,25 @@
+/*PRIORITY SCHEDULING
+author: Saranraj
+Note: This code does't work,because of some logical error and it will debug later.*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #include<math.h>
 
+int n;
+int ta_tim[10000];
+int ta(int x){
+    int c=0;
+    for(int i=0;i<x;i++){
+        c+=ta_tim[i];
 
+    }
+    return c;
+}
 int main(){
-    int n;
     printf("Enter number of process: ");
     scanf("%d",&n);
-    int arr_tim[n],b_tim[n],w_tim[n],prio[n],ta_tim[n];
+    int arr_tim[n],b_tim[n],w_tim[n],prio[n];
     printf("Enter the arrival time,burst time and priority for each process:\n");
     for(int i=0;i<n;i++){
         printf("P%d: ",i+1);
@@ -19,6 +30,7 @@ int main(){
 // Waiting time = Turn Around time – Burst time
 int a[n],b[n],p[n];
     for(int i=0;i<n;i++){
+        int f=0;
         if(i==0){
             for(int j=0;j<n;j++){
                 if(arr_tim[j]==0){
@@ -37,19 +49,25 @@ int a[n],b[n],p[n];
             int index;
 
             for(int j=0;j<n;j++){
-                if(min<prio[j]){
+                
+                if(min>prio[j]){
+                    f=1;
                     min=prio[j];
                     index=j;
                     mp[i]=j+1;
                 }
+                
 
             }
-            ta_tim[i]=abs(b_tim[index]-arr_tim[index]);
-            w_tim[i]=abs(ta_tim[index]-b_tim[index]);
+            if(f){
+            
+            ta_tim[i]=abs((ta(i)+b_tim[index])-arr_tim[index]);
+            w_tim[i]=abs(ta_tim[i]-b_tim[index]);
             a[i]=arr_tim[index];
              b[i]=b_tim[index];
              p[i]=prio[index];
-            prio[index]=100000;
+            prio[index]=10000;
+            }
 
 
 
