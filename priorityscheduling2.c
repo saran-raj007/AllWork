@@ -6,16 +6,6 @@ author: Saranraj
 #include<string.h>
 #include<math.h>
 int n;
-int ta_tim[1000];
-int aro(int x){
-    int c=0;
-    for(int i=0;i<x;i++){
-        c+=ta_tim[i];
-
-    }
-    return c;
-}
-
 int main(){
      printf("Enter number of process: ");
     scanf("%d",&n);
@@ -29,7 +19,6 @@ int main(){
     int fp[n];
     int p[n];
     int b[n];
-    // min=10000;
     int index;
     for(int i=0;i<n;i++){
         int min=10000;
@@ -53,7 +42,7 @@ int main(){
             ta_tim[i]=ta_tim[i-1]+b_tim[index];
             w_tim[i]=abs(ta_tim[i]-b_tim[index]);
             b[i]=b_tim[index];
-            // ta_time[i]=aro(i)+b_tim[i];
+            
         }
 
     }
