@@ -1,4 +1,4 @@
-/*PRIORITY SCHEDULING
+/*PRIORITY SCHEDULING with Arrival time
 author: Saranraj
 Note: This code does't work,because of some logical error and it will debug later.*/
 #include<stdio.h>
