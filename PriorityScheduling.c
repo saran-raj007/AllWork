@@ -61,7 +61,7 @@ int a[n],b[n],p[n];
             }
             if(f){
             
-            ta_tim[i]=abs((ta(i)+b_tim[index])-arr_tim[index]);
+            ta_tim[i]=abs((ta_tim[i-1]+b_tim[index])-arr_tim[index]);
             w_tim[i]=abs(ta_tim[i]-b_tim[index]);
             a[i]=arr_tim[index];
              b[i]=b_tim[index];
