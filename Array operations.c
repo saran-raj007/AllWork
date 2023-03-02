@@ -22,7 +22,6 @@ void Array_traversing(int arr[]){
 }
 void Array_searching(int arr[]){
     int u,f=0;
-    //printf("8");
     printf("Enter your key element: ");
     scanf("%d",&u);
     for(int i=0;i<n;i++){
@@ -30,7 +29,7 @@ void Array_searching(int arr[]){
             printf("your key element: %d\n""Index number of key element: %d",arr[i],i) ;
             f=1;
             break;
-            //f=1;
+            
         }
 
     }
