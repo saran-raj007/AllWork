@@ -6,11 +6,11 @@
 Here are some ideas to get you started:
 
 - 🔭 I’m currently working on  nothing
-- 🌱 I’m currently learning something
+- 🌱 I’m currently learning fastapi
 - 👯 I’m looking to collaborate on google
 - 🤔 I’m looking for help with  google
 - 💬 Ask me about ...
 - 📫 How to reach me: k.saranraj000@gmail.com
 - 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+- ⚡ Fun fact: ... 
 -->
