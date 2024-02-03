@@ -45,7 +45,7 @@ int a[n],b[n],p[n];
             }
         }
         else{
-            int min=1000000;
+            int min=INT_MAX;
             int index;
 
             for(int j=0;j<n;j++){
